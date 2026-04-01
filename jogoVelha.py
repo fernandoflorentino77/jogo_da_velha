@@ -7,14 +7,6 @@ colun3 = "7 / 8 / 9"
 marcacao = ""
 alternancia = 1
 
-def mensagemVitoria():
-    if (alternancia % 2 == 0):
-        print("Vitória do x!")
-        os._exit(checaVitoria == True)
-    else:
-        print("Vitória das bolinhas!") 
-        os._exit(checaVitoria == True)       
-
 def printTabela():
     print("==================")
     print("Jogo da Velha")
@@ -22,6 +14,15 @@ def printTabela():
     print(colun2)
     print(colun3)
     print("==================")
+
+
+def mensagemVitoria():
+    if (alternancia % 2 == 0):
+        print("Vitória do x!")
+        os._exit(checaVitoria == True)
+    else:
+        print("Vitória das bolinhas!") 
+        os._exit(checaVitoria == True) 
 
 def checaVitoria():
     if colun1 == "x / x / x" or colun1 == "o / o / o":
