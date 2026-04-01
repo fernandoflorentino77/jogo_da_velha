@@ -1,8 +1,4 @@
-print("==================")
-
-print("Jogo da Velha")
-
-print("==================")
+import os
 
 colun1 = "1 / 2 / 3"
 colun2 = "4 / 5 / 6"
@@ -11,30 +7,41 @@ colun3 = "7 / 8 / 9"
 marcacao = ""
 alternancia = 1
 
+def mensagemVitoria():
+    if (alternancia % 2 == 0):
+        print("Vitória do x!")
+        os._exit(checaVitoria == True)
+    else:
+        print("Vitória das bolinhas!") 
+        os._exit(checaVitoria == True)       
+
 def printTabela():
+    print("==================")
+    print("Jogo da Velha")
     print(colun1)
     print(colun2)
     print(colun3)
+    print("==================")
 
 def checaVitoria():
     if colun1 == "x / x / x" or colun1 == "o / o / o":
-        print("Vitória") 
+        mensagemVitoria()
     if colun2 == "x / x / x" or colun2 == "o / o / o":
-        print("Vitória")
+        mensagemVitoria()        
     if colun3 == "x / x / x" or colun3 == "o / o / o":
-        print("Vitória")
+        mensagemVitoria()
     if colun1[0] == "x" and colun2[0] == "x" and colun3[0] == "x" or colun1[0] == "o" and colun2[0] == "o" and colun3[0] == "o":
-        print("Vitória")
+        mensagemVitoria()
     if colun1[4] == "x" and colun2[4] == "x" and colun3[4] == "x" or colun1[4] == "o" and colun2[4] == "o" and colun3[4] == "o":
-        print("Vitória")                       
+        mensagemVitoria()                     
     if colun1[8] == "x" and colun2[8] == "x" and colun3[8] == "x" or colun1[8] == "o" and colun2[8] == "o" and colun3[8] == "o":
-        print("Vitória")                       
+        mensagemVitoria()                    
     if colun1[0] == "x" and colun2[4] == "x" and colun3[8] == "x" or colun1[0] == "o" and colun2[4] == "o" and colun3[8] == "o":
-        print("Vitória")
+        mensagemVitoria()
     if colun1[8] == "x" and colun2[4] == "x" and colun3[0] == "x" or colun1[8] == "o" and colun2[4] == "o" and colun3[0] == "o":
-        print("Vitória")
+        mensagemVitoria()
 
-
+os.system('cls')
 printTabela()
 
 while True:
@@ -66,6 +73,7 @@ while True:
         break
 
     alternancia += 1
-        
+
+    os.system('cls')   
     printTabela()
     checaVitoria()
