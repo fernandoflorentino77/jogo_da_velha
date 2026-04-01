@@ -41,15 +41,19 @@ def checaVitoria():
         mensagemVitoria()
     if colun1[8] == "x" and colun2[4] == "x" and colun3[0] == "x" or colun1[8] == "o" and colun2[4] == "o" and colun3[0] == "o":
         mensagemVitoria()
+    if alternancia == 10:
+        print("Deu velha!")
+        os._exit(1 == 1)
 
 os.system('cls')
 printTabela()
 
 while True:
-    resposta = int(input("Aonde você deseja marcar?" ))
     if (alternancia % 2 == 0):
+        resposta = int(input("Aonde o jogador dois deseja marcar?" ))
         marcacao = "o"
-    else: 
+    else:
+        resposta = int(input("Aonde o jogador um deseja marcar?" )) 
         marcacao = "x"
 
     if resposta == 1:
