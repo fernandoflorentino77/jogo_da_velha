@@ -13,6 +13,7 @@ def printTabela():
     print(colun1)
     print(colun2)
     print(colun3)
+    print("Digite o número da posição para marcar, e 0 para sair.")
     print("==================")
 
 
@@ -57,28 +58,72 @@ while True:
         marcacao = "x"
 
     if resposta == 1:
-        colun1 = colun1.replace("1",marcacao)
-    elif resposta == 2:
-        colun1 = colun1.replace("2",marcacao)
-    elif resposta == 3:
-        colun1 = colun1.replace("3",marcacao)
-    elif resposta == 4:
-        colun2 = colun2.replace("4",marcacao)
-    elif resposta == 5:
-        colun2 = colun2.replace("5",marcacao)
-    elif resposta == 6:
-        colun2 = colun2.replace("6",marcacao)
-    elif resposta == 7:
-        colun3 = colun3.replace("7",marcacao)
-    elif resposta == 8:
-        colun3 = colun3.replace("8",marcacao)
-    elif resposta == 9:
-        colun3 = colun3.replace("9",marcacao)
-    elif resposta == 0:
+        os.system('cls')   
+        if colun1[0] == "1":
+            colun1 = colun1.replace("1",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1   
+    if resposta == 2:
+        os.system('cls')
+        if colun1[4] == "2":
+            colun1 = colun1.replace("2",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 3:
+        os.system('cls')
+        if colun1[8] == "3":
+            colun1 = colun1.replace("3",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 4:
+        os.system('cls')
+        if colun2[0] == "4":
+            colun2 = colun2.replace("4",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 5:
+        os.system('cls')
+        if colun2[4] == "5":
+            colun2 = colun2.replace("5",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 6:
+        os.system('cls')
+        if colun2[8] == "6":
+            colun2 = colun2.replace("6",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 7:
+        os.system('cls')
+        if colun3[0] == "7":
+            colun3 = colun3.replace("7",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 8:
+        os.system('cls')
+        if colun3[4] == "8":
+            colun3 = colun3.replace("8",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 9:
+        os.system('cls')
+        if colun3[8] == "9":
+            colun3 = colun3.replace("9",marcacao)
+        else:
+            print("Marcação inválida")
+            alternancia -= 1
+    if resposta == 0:
         break
 
     alternancia += 1
 
-    os.system('cls')   
     printTabela()
     checaVitoria()
